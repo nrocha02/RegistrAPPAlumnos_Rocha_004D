@@ -1,0 +1,25 @@
+{
+  "alumnos": [
+    {
+      "id": 1,
+      "nombre": "Juanito",
+      "email": "juanito@duocuc.cl",
+      "password": "hola123"
+    },
+    {
+      "nombre": "XDDDD",
+      "email": "cokjdlsalkjsdalkj",
+      "password": "jkasdjklasdjklasd",
+      "id": 2
+    }
+  ],
+  "asistencias": [
+    {
+      "id": 1,
+      "alumnos": "Juanito",
+      "docente": "Nico",
+      "asignatura": "Programacion",
+      "fecha": ""
+    }
+  ]
+}

@@ -1,13 +1,86 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>inicio</ion-title>
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-img
+      class="logoduoc"
+      src="assets/elementos-ui/logo_duoc_uc.svg"
+    ></ion-img>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">inicio</ion-title>
-    </ion-toolbar>
+    <ion-toolbar> </ion-toolbar>
   </ion-header>
+
+  <ion-img src="assets/icon/logo.png"></ion-img>
+  <div *ngIf="estaLoggeado == false; else templateLoggeado">
+    <h1>¡Bienvenido a RegitrAPP!</h1>
+
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="8">
+          <ion-button
+            class="btn"
+            [routerLink]="['/login']"
+            expand="block"
+            shape="round"
+          >
+            Iniciar Sesión
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="8">
+          <ion-button
+            class="btn"
+            [routerLink]="['/registro']"
+            expand="block"
+            shape="round"
+          >
+            Registrase
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ng-template #templateLoggeado
+    ><h1>¡Hola de nuevo {{ usuario }} a RegitrAPP!</h1>
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="8">
+          <ion-button
+            class="btn"
+            shape="round"
+            expand="block"
+            [routerLink]="['/perfil', numero]"
+          >
+            Perfil</ion-button
+          >
+
+          <ion-button
+            class="btn"
+            (click)="cerrarSesion()"
+            expand="block"
+            shape="round"
+          >
+            Cerrar sesión
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ng-template>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="secondary">
+    <ion-img
+      class="logoacred"
+      src="assets/elementos-ui/logo_acred.svg"
+    ></ion-img>
+  </ion-toolbar>
+</ion-footer>
