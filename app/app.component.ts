@@ -30,5 +30,10 @@ export class AppComponent {
       redirecTo: "/registro",
       icon: "log-in-outline",
     },
+    {
+      name: "Escaner",
+      redirecTo: "/qrscanner",
+      icon: "qr-code-outline",
+    },
   ];
 }

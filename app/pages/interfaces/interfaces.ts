@@ -16,12 +16,12 @@ export interface IAsistencias {
   alumno: String;
   docente: String;
   asignatura: String;
-  fecha: Date;
+  fecha: String;
 }
 
 export interface Asistencia {
   alumno: String;
   docente: String;
   asignatura: String;
-  fecha: Date;
+  fecha: String;
 }
