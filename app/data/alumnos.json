@@ -11,6 +11,24 @@
       "email": "cokjdlsalkjsdalkj",
       "password": "jkasdjklasdjklasd",
       "id": 2
+    },
+    {
+      "id": 3,
+      "nombre": "ewe",
+      "email": "cachupin@duocuc.cl",
+      "password": "ewqqweqweqwe"
+    },
+    {
+      "nombre": "sexo",
+      "email": "sexo",
+      "password": "sexo",
+      "id": 4
+    },
+    {
+      "nombre": "sexo",
+      "email": "sexo",
+      "password": "sexo",
+      "id": 5
     }
   ],
   "asistencias": [

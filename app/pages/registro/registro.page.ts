@@ -40,19 +40,32 @@ export class RegistroPage implements OnInit {
         Validators.required,
         Validators.minLength(3),
       ]),
-      asignaturas: new FormControl([], [Validators.required]),
     });
   }
 
   ngOnInit() {}
 
   registrarUsuario() {
-    this.newUsers.nombre = this.registroForm.value.nombre;
-    this.newUsers.email = this.registroForm.value.email;
-    this.newUsers.password = this.registroForm.value.password;
-    this.authservice.CrearUsuario(this.newUsers).subscribe();
-    this.router.navigateByUrl("/inicio");
-    this.Enviar();
+    if (this.registroForm.valid) {
+      this.newUsers.nombre = this.registroForm.value.nombre;
+      this.newUsers.email = this.registroForm.value.email;
+      this.newUsers.password = this.registroForm.value.password;
+      this.authservice.CrearUsuario(this.newUsers).subscribe();
+      this.router.navigateByUrl("/inicio");
+      this.Enviar();
+    } else {
+      this.MostrarAlerta("Por favor, completa todos los campos.");
+    }
+  }
+
+  async MostrarAlerta(mensaje: string) {
+    const alert = await this.alertcontroller.create({
+      header: "Error",
+      message: mensaje,
+      buttons: ["OK"],
+    });
+
+    await alert.present();
   }
 
   async MostrarMensaje() {

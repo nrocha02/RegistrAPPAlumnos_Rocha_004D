@@ -18,24 +18,30 @@ const routes: Routes = [
       import("./pages/login/login.module").then((m) => m.LoginPageModule),
   },
   {
-    path: "perfil",
+    path: "perfil/:id",
     loadChildren: () =>
       import("./pages/perfil/perfil.module").then((m) => m.PerfilPageModule),
   },
   {
-    path: "perfilactualizar",
+    path: "perfilactualizar/:id",
     loadChildren: () =>
       import("./pages/perfilactualizar/perfilactualizar.module").then(
         (m) => m.PerfilactualizarPageModule
       ),
   },
   {
-    path: 'registro',
-    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
+    path: "registro",
+    loadChildren: () =>
+      import("./pages/registro/registro.module").then(
+        (m) => m.RegistroPageModule
+      ),
   },
   {
-    path: 'qrscanner',
-    loadChildren: () => import('./pages/qrscanner/qrscanner.module').then( m => m.QrscannerPageModule)
+    path: "qrscanner",
+    loadChildren: () =>
+      import("./pages/qrscanner/qrscanner.module").then(
+        (m) => m.QrscannerPageModule
+      ),
   },
 ];
 
