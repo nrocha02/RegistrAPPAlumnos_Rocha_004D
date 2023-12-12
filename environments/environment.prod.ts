@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: "http://localhost:3300",
+  apiUrl: "https://my-json-server.typicode.com/nrocha02/registrapp-json-server",
 };

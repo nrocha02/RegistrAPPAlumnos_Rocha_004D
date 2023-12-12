@@ -33,7 +33,7 @@ export class AppComponent {
     {
       name: "Escaner",
       redirecTo: "/qrscanner",
-      icon: "qr-code-outline",
+      icon: "scan-outline",
     },
   ];
 }
